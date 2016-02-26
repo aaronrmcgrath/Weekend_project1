@@ -25,16 +25,32 @@ $('#employeeForm').on('submit', function(event){
   var employees = {};
   // console.log('Test');
 
-  $.each($('#employeeFrom').serializeArray(), function(i, field){
-    values[field.name] = field.value;
+  $.each($('#employeeForm').serializeArray(), function(i, field){
+    employees[field.name] = field.value;
   });
 
   $('#employeeFrom').find('input[type=text]').val('');
+
   employeeArray.push(employees);
-  console.log(employeeArray);
-  console.log('!');
+
+  calTotalSalary();
+  // console.log(employeeArray);
+  // console.log('!');
 
 });
+calTotalSalary();
 });
 
-employeeArray = [];
+var employeeArray = [];
+var combinedMonthlySalary = 0;
+var totalSalary = 0;
+
+function calTotalSalary () {
+  for (var i = 0; i < employeeArray.length; i++){
+    var empSalary = employeeArray[i];
+    totalSalary += parseInt(empSalary.salary);
+    combinedMonthlySalary = totalSalary / 12;
+  }
+  console.log(combinedMonthlySalary);
+  // $()
+}
