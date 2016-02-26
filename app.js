@@ -34,7 +34,7 @@ $('#employeeForm').on('submit', function(event){
   employeeArray.push(employees);
 
   calTotalSalary();
-  // console.log(employeeArray);
+  console.log(employeeArray);
   // console.log('!');
 
 });
@@ -43,13 +43,15 @@ calTotalSalary();
 
 var employeeArray = [];
 var combinedMonthlySalary = 0;
-var totMonthSalary = 0;
+// var totMonthSalary = 0;
 
 function calTotalSalary () {
+  var totMonthSalary = 0;
   for (var i = 0; i < employeeArray.length; i++){
     var empSalary = employeeArray[i];
     totMonthSalary += parseInt(empSalary.salary) / 12;
   }
+  combinedMonthlySalary = totMonthSalary;
   console.log(totMonthSalary);
   // $()
 }
