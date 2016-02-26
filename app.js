@@ -43,14 +43,13 @@ calTotalSalary();
 
 var employeeArray = [];
 var combinedMonthlySalary = 0;
-var totalSalary = 0;
+var totMonthSalary = 0;
 
 function calTotalSalary () {
   for (var i = 0; i < employeeArray.length; i++){
     var empSalary = employeeArray[i];
-    totalSalary += parseInt(empSalary.salary);
-    combinedMonthlySalary = totalSalary / 12;
+    totMonthSalary += parseInt(empSalary.salary) / 12;
   }
-  console.log(combinedMonthlySalary);
+  console.log(totMonthSalary);
   // $()
 }
