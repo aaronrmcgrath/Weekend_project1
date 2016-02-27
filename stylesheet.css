@@ -1,0 +1,32 @@
+
+
+html, body, h1, h2, h3, ol, ul, li, a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+  html{
+  background-image: url("gc_background.jpg");
+  /*background: no-repeat center center fixed;*/
+  background-size: cover;
+}
+
+#employeeForm {
+  width: 500px;
+  margin-bottom: 25px;
+}
+
+#employeeForm, input {
+	display: block;
+  width: 200px;
+	margin-bottom: 25px;
+}
+
+/*input:active {
+  outline: #00FF00 dotted thick;
+}*/
+
+#employeeForm, label {
+	margin-bottom: 10px;
+}
