@@ -1,3 +1,7 @@
+
+
+//jQuery interaction for the employeeForm
+
 $(document).ready(function(){
 
   $('#employeeForm').on('submit', function(event){
@@ -21,10 +25,15 @@ $(document).ready(function(){
   calTotalSalary();
 });
 
+//Decalred variables to be used:
+//employeeArray will be the Array that the employee objects are stored
+//combinedMonthlySalary is where the total monthly salary of all employees is stored
+
 var employeeArray = [];
 var combinedMonthlySalary = 0;
 // var totMonthSalary = 0;
 
+//The calTotalSalary function calculates the all of the employees' salaries and converts it to monthly
 function calTotalSalary () {
   var totMonthSalary = 0;
   for (var i = 0; i < employeeArray.length; i++){
@@ -37,6 +46,7 @@ function calTotalSalary () {
   displaySalary();
 }
 
+//The displaySalary function displays the combinedMonthlySalary only if it is > 0
 function displaySalary() {
   if (combinedMonthlySalary > 0) {
     return $('.total-monthly-salary').text("Total Monthly Salary: " + combinedMonthlySalary);
@@ -46,7 +56,8 @@ function displaySalary() {
 }
 
 
-// < -- SCOTT'S NOTES -- > ******
+// < -- SCOTT'S NOTES -- >
+//          ******
 // console.log('This works!');
 //Code from lecture ***
 //   $("#catForm").on("submit", function(event){
