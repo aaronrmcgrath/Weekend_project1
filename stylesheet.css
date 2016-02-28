@@ -13,7 +13,14 @@ html{
 }
 
 h1 {
+  padding: 5px;
+  margin: auto;
   text-align: center;
+  text-align: center;
+}
+
+.total-monthly-salary {
+  font-weight: bold;
 }
 
 #employeeForm {

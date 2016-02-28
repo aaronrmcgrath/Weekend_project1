@@ -27,11 +27,16 @@ $(document).ready(function(){
     $el.append('<p>Employee ID: ' + employees.employeeid + '</p>');
     $el.append('<p>Job Title: ' + employees.jobtitle + '</p>');
     $el.append('<p>Annual Salary: ' + employees.salary + '</p>');
+
+    $el.append('<button class="remove">Remove</button>');
+
+    $('.employee-info').on('mouseup', '.remove', removeSalary);
     // console.log('!');
 
   });
   calTotalSalary();
 });
+
 
 //Decalred variables to be used:
 //employeeArray will be the Array that the employee objects are stored
@@ -41,6 +46,7 @@ var employeeArray = [];
 var combinedMonthlySalary = 0;
 var i = 0;
 // var totMonthSalary = 0;
+
 
 //The calTotalSalary function calculates the all of the employees' salaries and converts it to monthly
 function calTotalSalary () {
@@ -55,6 +61,7 @@ function calTotalSalary () {
   displaySalary();
 }
 
+
 //The displaySalary function displays the combinedMonthlySalary only if it is > 0
 function displaySalary() {
   if (combinedMonthlySalary > 0) {
@@ -63,6 +70,40 @@ function displaySalary() {
     return $('.total-monthly-salary').text(" ");
   }
 }
+
+
+//Removes the current employee from html page
+function removeSalary(){
+  $(this).parent().remove();
+  // reCalTotalSalary();
+  console.log(employeeArray);
+}
+
+
+
+//Tried to figure out a function to re-calculate the total
+// monthly salary less the current employee removed
+// function reCalTotalSalary () {
+//   var totMonthSalary = 0;
+//   for (var i = 0; i < employeeArray.length; i++){
+//     var empSalary = employeeArray[i];
+//     totMonthSalary += parseInt(empSalary.salary) / 12;
+//   }
+//   combinedMonthlySalary = totMonthSalary;
+//   // return combinedMonthlySalary;
+//   console.log(totMonthSalary);
+//   displaySalary();
+// }
+
+
+
+
+
+
+
+
+// < -- *** -- >
+
 
 
 // < -- SCOTT'S NOTES -- >
