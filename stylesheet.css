@@ -6,27 +6,33 @@ html, body, h1, h2, h3, ol, ul, li, a {
   margin: 0;
 }
 
-  html{
-  background-image: url("gc_background.jpg");
-  /*background: no-repeat center center fixed;*/
+html{
+  /*background-image: url("gc_background.jpg");*/
+  background-color: #42ceb9;
   background-size: cover;
+}
+
+h1 {
+  text-align: center;
 }
 
 #employeeForm {
   width: 500px;
-  margin-bottom: 25px;
+  margin: 5px 10px 25px 10px;
 }
 
 #employeeForm, input {
-	display: block;
+  display: block;
   width: 200px;
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 /*input:active {
-  outline: #00FF00 dotted thick;
+outline: #00FF00 dotted thick;
 }*/
 
 #employeeForm, label {
-	margin-bottom: 10px;
+  padding: 5px 0 5px 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #82b2bc;
 }

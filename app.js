@@ -13,12 +13,20 @@ $(document).ready(function(){
       employees[field.name] = field.value;
     });
 
-    $('#employeeFrom').find('input[type=text]').val('');
+    $('#employeeForm').find('input[type=text]').val('');
 
     employeeArray.push(employees);
-
     calTotalSalary();
     console.log(employeeArray);
+
+    $('.employee-info').append('<div class="employees"></div>');
+
+    var $el = $('.employee-info').children().last();
+
+    $el.append('<p>Employee: ' + employees.firstname + ' ' + employees.lastname + '</p>');
+    $el.append('<p>Employee ID: ' + employees.employeeid + '</p>');
+    $el.append('<p>Job Title: ' + employees.jobtitle + '</p>');
+    $el.append('<p>Annual Salary: ' + employees.salary + '</p>');
     // console.log('!');
 
   });
@@ -31,6 +39,7 @@ $(document).ready(function(){
 
 var employeeArray = [];
 var combinedMonthlySalary = 0;
+var i = 0;
 // var totMonthSalary = 0;
 
 //The calTotalSalary function calculates the all of the employees' salaries and converts it to monthly
