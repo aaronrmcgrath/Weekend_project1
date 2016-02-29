@@ -21,6 +21,9 @@ h1 {
 
 .total-monthly-salary {
   font-weight: bold;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
 }
 
 #employeeForm {
@@ -42,4 +45,12 @@ outline: #00FF00 dotted thick;
   padding: 5px 0 5px 0;
   font-weight: bold;
   text-shadow: 1px 1px 3px #82b2bc;
+}
+
+.employee-info {
+  background-color: #7ea09d;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1 black;
+
 }
